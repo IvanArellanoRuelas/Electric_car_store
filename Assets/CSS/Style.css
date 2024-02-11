@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: blue;
+  grid-area: header;
+}
+
+.Title {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  color: #ffffff;
+}
+
+.Hamburger {
+  justify-content: flex-end;
+}
+
+aside {
+  grid-area: aside;
+  margin: 0;
+  padding: 0;
+  background-color: #d0d3d4;
+  width: 100%;
+}
+
+.Filtro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+}
+
+.Inicio {
+  display: flex;
+  flex-direction: column;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card img {
+  width: 30%;
+  height: 30%;
+}
+
+.footer {
+  display: flex;
+  grid-area: footer;
+  background-color: blue;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  grid-area: main;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    flex-direction: column;
+    max-height: 100%;
+  }
+  footer {
+    flex-direction: column;
+    background-color: blue;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Inicio {
+    flex-direction: row;
+  }
+
+  .Card {
+    min-width: 33%;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      " header aside"
+      "header main"
+      "footer main";
+  }
+}
